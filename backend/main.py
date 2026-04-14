@@ -14,7 +14,7 @@ load_dotenv()
 # from backend.models.database import init_db
 
 from backend.utils.logger import log
-# import backend.api.routes as routes
+import backend.api.routes as routes
 
 # Safe limiter (without RATE_LIMIT)
 limiter = Limiter(key_func=get_remote_address)
@@ -47,7 +47,7 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Register routes
-# app.include_router(routes.router, prefix="/api/v1")
+app.include_router(routes.router, prefix="/api/v1")
 @app.get("/")
 def home():
     return {"message": "LEXA backend running "}
