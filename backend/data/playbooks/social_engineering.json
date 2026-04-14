@@ -1,0 +1,16 @@
+{
+  "threat_type": "social_engineering",
+  "summary": "Social engineering involves psychological manipulation of people into performing actions or divulging confidential information.",
+  "actions": [
+    {"description": "Interview targeted individuals to assess the extent of information disclosed.", "priority": "High"},
+    {"description": "Reset credentials for any affected staff and enforce immediate MFA re-enrollment.", "priority": "High"},
+    {"description": "Send organizational alert regarding suspected social engineering tactics.", "priority": "Medium"}
+  ],
+  "prevention": [
+    "Establish strict verification procedures for sensitive requests.",
+    "Conduct frequent scenario-based security awareness training."
+  ],
+  "references": [
+    "https://attack.mitre.org/tactics/TA0001/"
+  ]
+}

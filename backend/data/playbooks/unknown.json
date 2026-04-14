@@ -1,0 +1,14 @@
+{
+  "threat_type": "unknown",
+  "summary": "The indicator did not confidently match any specific threat profile. It requires manual analysis and triage.",
+  "actions": [
+    {"description": "Assign alert to Tier 2 SOC analyst for manual verification.", "priority": "Medium"},
+    {"description": "Isolate the asset if anomalous behavior is actively observed.", "priority": "Medium"},
+    {"description": "Extract IOCs and submit them to threat intel platforms for deeper context.", "priority": "Low"}
+  ],
+  "prevention": [
+    "Ensure comprehensive logging and monitoring are enabled to establish a baseline.",
+    "Implement Zero Trust architecture principles."
+  ],
+  "references": []
+}

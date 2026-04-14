@@ -1,0 +1,16 @@
+{
+  "threat_type": "sql_injection",
+  "summary": "SQL injection is a code injection technique used to attack data-driven applications, inserting malicious SQL statements into entry fields.",
+  "actions": [
+    {"description": "Implement WAF (Web Application Firewall) rules to block malicious SQL patterns.", "priority": "High"},
+    {"description": "Review application logs to determine if data exfiltration occurred.", "priority": "Medium"},
+    {"description": "Revoke database access for compromised service accounts and rotate passwords.", "priority": "High"}
+  ],
+  "prevention": [
+    "Use prepared statements or parameterized queries.",
+    "Sanitize all user inputs."
+  ],
+  "references": [
+    "https://attack.mitre.org/techniques/T1190/"
+  ]
+}

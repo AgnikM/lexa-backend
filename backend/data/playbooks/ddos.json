@@ -1,0 +1,16 @@
+{
+  "threat_type": "ddos",
+  "summary": "Distributed Denial of Service (DDoS) attack is a malicious attempt to disrupt normal traffic of a targeted server, service or network.",
+  "actions": [
+    {"description": "Route traffic through DDoS mitigation scrubbing centers (e.g., Cloudflare, Akamai).", "priority": "High"},
+    {"description": "Implement rate limiting and geographic blocking.", "priority": "Medium"},
+    {"description": "Monitor upstream bandwidth and notify ISP if volumetric attack exceeds thresholds.", "priority": "High"}
+  ],
+  "prevention": [
+    "Utilize Anycast network architecture.",
+    "Maintain scalable cloud infrastructure."
+  ],
+  "references": [
+    "https://attack.mitre.org/techniques/T1498/"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "threat_type": "ransomware",
+  "summary": "Ransomware is a type of malware that threatens to publish the victim's data or perpetually block access to it unless a ransom is paid.",
+  "actions": [
+    {"description": "Disconnect infected machines from the network to prevent lateral movement.", "priority": "Critical"},
+    {"description": "Engage Incident Response team and possibly law enforcement.", "priority": "High"},
+    {"description": "Identify and secure backups off-site or offline.", "priority": "High"}
+  ],
+  "prevention": [
+    "Maintain offline, immutable backups.",
+    "Disable SMBv1 and segment critical network zones."
+  ],
+  "references": [
+    "https://attack.mitre.org/techniques/T1486/"
+  ]
+}

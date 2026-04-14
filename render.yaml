@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: lexa-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt && python -m spacy download en_core_web_sm && python setup.py && python train.py"
+    startCommand: "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: VT_API_KEY
+        sync: false # Set this securely in the Render Dashboard
+      - key: PYTHON_VERSION
+        value: 3.11.0

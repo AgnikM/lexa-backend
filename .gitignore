@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+lexa_data.db
+.env
+backend/ml/*.pkl
+# Ignore datasets except the structure placeholder
+backend/data/datasets/*
+!backend/data/datasets/README.md

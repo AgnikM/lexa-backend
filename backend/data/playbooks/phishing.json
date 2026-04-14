@@ -1,0 +1,16 @@
+{
+  "threat_type": "phishing",
+  "summary": "Phishing attempts to acquire sensitive information such as usernames, passwords, and credit card details by masquerading as a trustworthy entity.",
+  "actions": [
+    {"description": "Isolate the affected user account and reset credentials immediately.", "priority": "High"},
+    {"description": "Block the sender's email address or domain at the email gateway.", "priority": "Medium"},
+    {"description": "Scan internal logs to identify if other users received similar communications.", "priority": "Medium"}
+  ],
+  "prevention": [
+    "Implement MFA for all sensitive accounts.",
+    "Conduct regular anti-phishing training for employees."
+  ],
+  "references": [
+    "https://attack.mitre.org/techniques/T1566/"
+  ]
+}
