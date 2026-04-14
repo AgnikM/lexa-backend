@@ -19,23 +19,7 @@ limiter = Limiter(key_func=get_remote_address, default_limits=[RATE_LIMIT])
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    log.info("Starting up LEXA Backend...")
-    # Initialize DB (Creates SQLite if missing)
-    await init_db()
-    
-    # Initialize heavy singletons
-    log.info("Loading ML Models and Playbooks...")
-    from backend.services.nlp_processor import ThreatNLPProcessor
-    from backend.services.classifier import LEXAClassifier
-    from backend.services.playbook_engine import PlaybookEngine
-    from backend.utils.virustotal import VirusTotalClient
-
-    routes.nlp = ThreatNLPProcessor()
-    routes.classifier = LEXAClassifier()
-    routes.playbook_engine = PlaybookEngine()
-    routes.vt_client = VirusTotalClient()
-    
-    log.info("LEXA Backend fully initialized.")
+    log.info("Starting lightweight LEXA Backend...")
     yield
     log.info("Shutting down LEXA Backend.")
 
